@@ -8,8 +8,14 @@ import com.douzon.jdbc.bookshop.vo.BookVo;
 public class BookDaoTest {
 
 	public static void main(String[] args) {
-		//insertTest("이클립스", 2);
-		//insertTest("브레이킹던", 2);
+//		insertTest("이클립스", 2);
+//		insertTest("브레이킹던", 2);
+//		insertTest("아리랑", 3);
+//		insertTest("태백산맥", 3);
+//		insertTest("귀천", 4);
+//		insertTest("젊은그들", 5);
+//		insertTest("아프니깐 청춘이다", 6);
+//		insertTest("풀하우스", 7);
 		
 		getListTest();
 	}

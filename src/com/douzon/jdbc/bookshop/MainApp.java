@@ -1,8 +1,10 @@
 package com.douzon.jdbc.bookshop;
 
+import java.util.List;
 import java.util.Scanner;
 
-import prob02.Book;
+import com.douzon.jdbc.bookshop.dao.BookDao;
+import com.douzon.jdbc.bookshop.vo.BookVo;
 
 public class MainApp {
 	public static void main(String[] args) {
@@ -18,10 +20,15 @@ public class MainApp {
 	}
 	
 	private static void rent(long no) {
-		new BookDao().updateStatus(no, "대여중");
+		new BookDao().update(no, "대여중");
 	}
 	
 	private static void displayBookInfo() {
 		System.out.println("*****도서 정보 출력하기******");
+
+		List<BookVo> list = new BookDao().getList();
+		for(BookVo vo:list) {
+			System.out.println("[" + vo.getNo() + "]책제목:" + vo.getTitle() + ", 저자:" + vo.getAuthorName() + ", 대여유무:" + vo.getStatus() );
+		}
 	}	
 }

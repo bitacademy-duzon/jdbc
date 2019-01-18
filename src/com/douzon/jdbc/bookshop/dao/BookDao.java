@@ -61,8 +61,8 @@ public class BookDao {
 			conn = getConnection();
 			String sql =
 				" insert " +
-				"   into book " + 
-				" values (null, ?, '대여가능', ?)";
+				"   into book(title, author_no)" + 
+				" values (?, ?)";
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setString(1, bookVo.getTitle());
